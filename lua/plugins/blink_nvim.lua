@@ -8,7 +8,7 @@ return {
     },
     completion = {
       list = {
-        selection = "auto_insert",
+        selection = "preselect",
       },
     },
   },
