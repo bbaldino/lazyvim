@@ -1,9 +1,38 @@
 return {
   "saghen/blink.cmp",
   opts = {
+    sources = { default = { "luasnip" } },
+    snippets = {
+      expand = function(snippet)
+        require("luasnip").lsp_expand(snippet)
+      end,
+      active = function(filter)
+        if filter and filter.direction then
+          return require("luasnip").jumpable(filter.direction)
+        end
+        return require("luasnip").in_snippet()
+      end,
+      jump = function(direction)
+        require("luasnip").jump(direction)
+      end,
+    },
     keymap = {
       preset = "enter",
-      ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
+      -- ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
+      ["<Tab>"] = {
+        function(cmp)
+          local ls = require("luasnip")
+          if ls.choice_active() then
+            print("choice is active!")
+            ls.change_choice(1)
+            return true
+          end
+          print("choice not active")
+        end,
+        "snippet_forward",
+        "select_next",
+        "fallback",
+      },
       ["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
     },
     completion = {
