@@ -13,6 +13,13 @@ return {
         },
       },
     },
+    sources = {
+      providers = {
+        buffer = {
+          min_keyword_length = 8,
+        },
+      },
+    },
   },
 }
 -- return {
