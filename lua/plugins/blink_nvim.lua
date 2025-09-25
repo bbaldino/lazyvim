@@ -1,27 +1,44 @@
-return {
-  "saghen/blink.cmp",
-  opts = {
-    keymap = {
-      preset = "enter",
-      ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
-      ["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
-    },
-    completion = {
-      list = {
-        selection = {
-          preselect = true,
-        },
-      },
-    },
-    sources = {
-      providers = {
-        buffer = {
-          min_keyword_length = 8,
-        },
-      },
-    },
-  },
-}
+return {}
+-- return {
+--   "saghen/blink.cmp",
+--   opts = {
+--     completion = {
+--       menu = {
+--         auto_show = false,
+--       },
+--     },
+--     keymap = {
+--       preset = "enter",
+--       ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
+--       ["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
+--     },
+--   },
+-- }
+
+-- return {
+--   "saghen/blink.cmp",
+--   opts = {
+--     keymap = {
+--       preset = "enter",
+--       ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
+--       ["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
+--     },
+--     completion = {
+--       list = {
+--         selection = {
+--           preselect = true,
+--         },
+--       },
+--     },
+--     sources = {
+--       providers = {
+--         buffer = {
+--           min_keyword_length = 8,
+--         },
+--       },
+--     },
+--   },
+-- }
 -- return {
 --   "saghen/blink.cmp",
 --   lazy = false, -- lazy loading handled internally
