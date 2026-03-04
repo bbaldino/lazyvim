@@ -4,5 +4,8 @@ return {
     adapaters = {
       ["rustaceanvim-neotest"] = {},
     },
+    output = {
+      open_on_run = false,
+    },
   },
 }
