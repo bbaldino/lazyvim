@@ -3,6 +3,7 @@
 -- Add any additional options here
 
 -- Enable OSC 52 clipboard for SSH/tmux
+vim.opt.clipboard = "unnamedplus"
 vim.g.clipboard = {
   name = "OSC 52",
   copy = {
